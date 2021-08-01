@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "880266374447",
+    "firebase_url": "https://logrocon-4d88f-default-rtdb.firebaseio.com",
+    "project_id": "logrocon-4d88f",
+    "storage_bucket": "logrocon-4d88f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880266374447:android:06ba399102afdc48cc05da",
+        "android_client_info": {
+          "package_name": "com.logrocon.messanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880266374447-21mndf8uolb738k1t96sbccbrmrnae2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCslTJ9ztTfcWciEEo70uhVGTbPkFCwsf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880266374447-21mndf8uolb738k1t96sbccbrmrnae2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
