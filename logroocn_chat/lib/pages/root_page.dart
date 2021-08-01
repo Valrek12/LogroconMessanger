@@ -48,13 +48,6 @@ class _RootPageState extends State<RootPage> {
     });
   }
 
-  void _onSignedOut() {
-    setState(() {
-      authStatus = AuthStatus.NOT_LOGGED_IN;
-      _userId = "";
-    });
-  }
-
   Widget _waitingScreen() {
     return Scaffold(
       body: Container(

@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   static const primarySwatch = Colors.green;
   // button color
-  static const buttonColor = Colors.green;
+  static const buttonColor = Colors.black;
   // app name
   static const appName = 'Logrocon Chat';
   // boolean for showing home page if user unverified

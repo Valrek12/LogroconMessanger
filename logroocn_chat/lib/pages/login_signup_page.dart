@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:logroocn_chat/services/authentification.dart';
 
 class LoginSignUpPage extends StatefulWidget {
@@ -23,7 +24,7 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
 
   // Initial form is login form
   FormMode _formMode = FormMode.LOGIN;
-  bool _isIos;
+  bool _isAndroid;
   bool _isLoading;
 
   // Check if form is valid before perform login or signup
@@ -68,7 +69,7 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
         print('Error: $e');
         setState(() {
           _isLoading = false;
-          _isIos ? _errorMessage = e.details : _errorMessage = e.message;
+          _isAndroid ? _errorMessage = e.message : _errorMessage = e.details;
         });
       }
     } else {
@@ -111,17 +112,15 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    _isIos = Theme.of(context).platform == TargetPlatform.iOS;
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    _isAndroid = Theme.of(context).platform == TargetPlatform.android;
     return new Scaffold(
-        appBar: new AppBar(
-          title: new Text(widget.params['appName']),
-        ),
         body: Stack(
-          children: <Widget>[
-            _showBody(),
-            _showCircularProgress(),
-          ],
-        ));
+      children: <Widget>[
+        _showBody(),
+        _showCircularProgress(),
+      ],
+    ));
   }
 
   Widget _showCircularProgress() {
@@ -218,16 +217,14 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
 
   Widget _showLogo() {
     return new Hero(
-      tag: 'hero',
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(0.0, 70.0, 0.0, 0.0),
-        child: CircleAvatar(
-          backgroundColor: Colors.transparent,
-          radius: 48.0,
-          child: Image.asset('assets/imageLogo.png'),
-        ),
-      ),
-    );
+        tag: 'User',
+        child: Padding(
+          padding: const EdgeInsets.only(top: 90.0),
+          child: Center(
+            child: Container(
+                width: 300, height: 150, child: Image.asset('assets/logo.jpg')),
+          ),
+        ));
   }
 
   Widget _showEmailInput() {
@@ -316,15 +313,15 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
     switch (_formMode) {
       case FormMode.LOGIN:
         return new Text('Login',
-            style: new TextStyle(fontSize: 20.0, color: Colors.white));
+            style: new TextStyle(fontSize: 20.0, color: Colors.orange));
         break;
       case FormMode.SIGNUP:
         return new Text('Create account',
-            style: new TextStyle(fontSize: 20.0, color: Colors.white));
+            style: new TextStyle(fontSize: 20.0, color: Colors.orange));
         break;
       case FormMode.FORGOTPASSWORD:
         return new Text('Reset password',
-            style: new TextStyle(fontSize: 20.0, color: Colors.white));
+            style: new TextStyle(fontSize: 20.0, color: Colors.orange));
         break;
     }
     return new Spacer();
