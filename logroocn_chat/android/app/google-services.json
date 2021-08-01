@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:880266374447:android:9d192408e40963b1cc05da",
+        "android_client_info": {
+          "package_name": "com.example.logroocn_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880266374447-21mndf8uolb738k1t96sbccbrmrnae2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCslTJ9ztTfcWciEEo70uhVGTbPkFCwsf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880266374447-21mndf8uolb738k1t96sbccbrmrnae2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:880266374447:android:06ba399102afdc48cc05da",
         "android_client_info": {
           "package_name": "com.logrocon.messanger"

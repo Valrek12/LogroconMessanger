@@ -56,6 +56,7 @@ flutter:
     - images/userImage6.jpg
     - images/userImage7.jpg
     - images/userImage8.jpg
+    - assets/imageLogo.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
